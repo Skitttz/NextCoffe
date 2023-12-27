@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         besley: ['var(--font-besley)'],
+        roboto: ['var(--font-roboto)'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -26,9 +27,18 @@ module.exports = {
             transform: 'translateY(0px)',
           },
         },
+        animeFade: {
+          '0%': {
+            opacity: 0,
+          },
+          '100%': {
+            opacity: 1,
+          },
+        },
       },
       animation: {
         animeDown: 'animeDown 1s ease-in-out forwards',
+        animeFade: 'animeFade 1s ease-in forwards',
       },
     },
   },
