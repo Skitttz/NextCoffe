@@ -1,28 +1,29 @@
-'use client';
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function CoffePage() {
-  const [data, setData] = useState('');
-  const getData = async () => {
-    const resp = await fetch('https://api.sampleapis.com/coffee/hot');
-    const json = await resp.json();
-    setData(json);
-  };
+const getCoffesData = async () => {
+  const resp = await fetch('https://api.sampleapis.com/coffee/hot');
+  return resp.json();
+};
 
-  useEffect(() => {
-    getData();
-  }, []);
+interface CoffesItem {
+  id: number;
+  title: string;
+  description: string;
+  ingredients: string;
+  image: string;
+}
 
+export default async function CoffePage() {
+  const coffes = await getCoffesData();
   return (
-    <main className="bg-slate-200 animate-animeDown h-screen">
+    <main className="bg-slate-200 animate-animeDown h-screen mt-4">
       <h1 className="text-slate-600 max-w-2xl mx-auto mb-8 text-3xl font-semibold">
-        Coffe Items
+        Coffe Store
       </h1>
       <div className="grid grid-cols-4 gap-x-8 gap-y-12 max-w-2xl mx-auto">
-        {data &&
-          data.map((item, index) =>
+        {coffes &&
+          coffes.map((item: CoffesItem, index: number) =>
             index < 16 ? (
               <ul className="mx-auto" key={index}>
                 <li>
@@ -37,9 +38,6 @@ export default function CoffePage() {
                   </Link>
                 </li>
                 <li className="font-medium text-center">{item.title}</li>
-                {/* <li className="block mt-4 text-sm text-slate-800 text-justify">
-                  {item.description}
-                </li> */}
               </ul>
             ) : null,
           )}

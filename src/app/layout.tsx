@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { besley } from './fonts';
+import { besley, roboto } from './fonts';
 import Header from './_components/Header';
 import Footer from './_components/Footer';
 
@@ -14,12 +14,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link rel="icon" href="/favicon.ico" size={32} />
+      <link rel="icon" href="/favicon.ico" />
       <body
-        className={`${inter.className} ${besley.variable}  bg-slate-200 scroll-smooth`}
+        className={`${inter.className} ${besley.variable} ${roboto.variable} bg-slate-200 scroll-smooth`}
       >
         <Header />
-        <main className="pt-2">{children}</main>
+        <main className="pt-2 min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
