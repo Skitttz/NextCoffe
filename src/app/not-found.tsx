@@ -16,7 +16,7 @@ export default function NotFound() {
           />
         </div>
         <div className="flex flex-col gap-y-4 text-center">
-          <h1 className="text-3xl p-2 bg-gradient-to-r from-amber-600 to-amber-500 rounded-md text-slate-200 ">
+          <h1 className="text-3xl p-2 bg-gradient-to-l from-amber-600 to-amber-500 rounded-md text-slate-200 ">
             Error 404
           </h1>
           <div className="mb-4">

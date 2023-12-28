@@ -9,7 +9,7 @@ interface AboutItems {
 export default function AboutPage() {
   const contentAbout = [
     {
-      title: 'Our Journey Unveiled',
+      title: 'Our Destiny Unveiled',
       content: `In the heart of Brazil (Aracaju/Sergipe), nestled amidst the bustling streets, Next Coffee emerged in 1999 as more than just a coffee shop; it became a captivating tale of craftsmanship, camaraderie, and the pursuit of extraordinary coffee.`,
     },
     {
@@ -23,8 +23,10 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="min-h-[1080px] max-w-2xl mx-auto animate-animeDown lg:py-2">
-      <h2 className="text-3xl mb-6 font-semibold ">About</h2>
+    <main className="min-h-[1080px] max-w-2xl mx-auto animate-animeDown lg:py-4">
+      <h2 className="text-3xl mb-6 font-semibold font-besley text-amber-950">
+        Journey Next Coffee
+      </h2>
       <div className=" grid grid-cols-2 gap-x-8">
         <div>
           <ul className="flex flex-col gap-y-4">
