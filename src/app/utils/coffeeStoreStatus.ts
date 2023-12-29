@@ -1,12 +1,14 @@
 export function coffeStoreStatus (){
     const today: Date = new Date();
-
     const dayOfWeek: number = today.getDay();
+
     const hour: number = today.getHours();
     const hourOfDay = hour < 10 ? "0"+ hour : hour;
     const hourPMorAM: string = hour < 12 ? 'AM' : 'PM';
 
-    const minOfDay: number = today.getMinutes();
+    const min: number = today.getMinutes();
+    const minOfDay = min < 10 ? "0" + min : min;
+
     const daysOfWeek: string[] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     // Get the name of the day of the week
     const dayName: string = daysOfWeek[dayOfWeek];
@@ -18,8 +20,5 @@ export function coffeStoreStatus (){
     } else {
       status = '🟢';
     }
-
-
     return `${dayName}, ${hourOfDay}:${minOfDay} ${hourPMorAM} ${status}`;
-  
 };
