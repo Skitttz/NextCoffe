@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <>
       <header className="w-full bg-gray-200 bg-opacity-80 border-b border-b-slate-600 border-opacity-10 px-4 pt-2 mx-auto fixed z-50">
-        <nav className="max-w-2xl mx-auto flex justify-between items-center gap-x-6">
+        <nav className="max-w-5xl mx-auto flex justify-between items-center gap-x-6">
           <Link className="flex items-center" href={'/'}>
             <h1 className="text-2xl font-besley font-black text-amber-800">
               Next [

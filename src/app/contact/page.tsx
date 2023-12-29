@@ -35,8 +35,8 @@ export default function Contact() {
   ];
 
   return (
-    <main className="min-h-[1080px] max-w-2xl mx-auto animate-animeDown">
-      <div className=" grid grid-cols-[260px,1fr] gap-x-8 mt-6">
+    <main className="min-h-[1080px] max-w-5xl mx-auto animate-animeDown">
+      <div className=" grid grid-cols-[1fr,1fr] gap-x-8 mt-6">
         <div className="flex flex-col gap-y-4">
           <div className="pb-4 ">
             <h2 className="block text-amber-950 font-besley text-xl text-center mb-3 font-medium border border-b-amber-950 border-opacity-10 rounded-xl">
@@ -56,12 +56,12 @@ export default function Contact() {
                   Closed
                 </span>{' '}
               </li>
-              <li className="mt-4 border border-x-slate-300 rounded-md p-2 text-center text-amber-950 font-medium">
+              <li className="mt-8 border border-x-slate-300 rounded-md p-2 text-center text-amber-950 font-medium">
                 {coffeStoreStatus()}
               </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-y-3 mt-3">
+          <div className="flex flex-col gap-y-3 mt-8">
             <h2 className="block text-amber-950 font-besley text-xl text-center mb-3 font-medium  border border-b-amber-950 border-opacity-10 rounded-xl">
               Contact Links 💬
             </h2>
@@ -83,7 +83,7 @@ export default function Contact() {
         <div className="inline-block mx-auto">
           <Image
             src={coffeContact}
-            width={400}
+            width={600}
             height={600}
             alt="Coffe Image Contact"
             className="mx-auto"

@@ -23,7 +23,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="min-h-[1080px] max-w-2xl mx-auto animate-animeDown lg:py-4">
+    <main className="min-h-[1080px] max-w-5xl mx-auto animate-animeDown lg:py-4">
       <h2 className="text-3xl mb-6 font-semibold font-besley text-amber-950">
         Journey Next Coffee
       </h2>

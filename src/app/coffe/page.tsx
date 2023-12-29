@@ -18,10 +18,10 @@ export default async function CoffePage() {
   const coffes = await getCoffesData();
   return (
     <main className="bg-slate-200 animate-animeDown h-screen py-4">
-      <h1 className="text-amber-950 max-w-2xl mx-auto mb-8 text-3xl font-semibold font-besley">
+      <h1 className="text-amber-950 max-w-5xl mx-auto mb-8 text-3xl font-semibold font-besley">
         Coffe Store
       </h1>
-      <div className="grid grid-cols-4 gap-x-8 gap-y-12 max-w-2xl mx-auto">
+      <div className="grid grid-cols-4 gap-x-8 gap-y-12 max-w-5xl mx-auto">
         {coffes &&
           coffes.map((item: CoffesItem, index: number) =>
             index < 16 ? (

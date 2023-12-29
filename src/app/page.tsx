@@ -5,7 +5,7 @@ import coffeImage from '../../public/coffe_home.png';
 
 export default function Home() {
   return (
-    <main className="animate-animeFade h-screen max-w-2xl mx-auto">
+    <main className="animate-animeFade h-screen max-w-5xl mx-auto">
       <div className=" divide-y-4 divide-yellow-400">
         <div className="grid grid-cols-[2fr,1fr] gap-x-4 h-[auto]">
           <div className="flex flex-col gap-y-4 my-auto">
@@ -16,9 +16,13 @@ export default function Home() {
             <h2 className={`font-besley text-7xl`}>
               Good <span className="text-amber-950 ">Coffe</span>
             </h2>
-            <p className="text-sm font-light text-amber-950">
+            <p className="font-light text-amber-950">
               In the aromatic universe, each bean is a story waiting to be told,
-              and each cup is a unique sensory journey.
+              and each cup is a unique sensory journey. With each cup, embark on
+              a sensory journey through rich earthy notes and subtle fruity
+              hints. Becomes a gateway to a transcendent experience, blending
+              tradition and innovation. Explore the world within each aromatic
+              brew.
             </p>
             <div className="flex gap-x-4 font-besley">
               <Link
