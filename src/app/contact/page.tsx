@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import iconInstagram from '../../../public/icon-instagram.svg';
 import iconMail from '../../../public/icon-email.svg';
-import iconWhatsapp from '../../../public/icon-whatsapp.png';
+import iconWhatsapp from '../../../public/icon-whatsapp.svg';
 import coffeContact from '../../../public/coffe_contact.png';
 import { coffeStoreStatus } from '../utils/coffeeStoreStatus';
 
