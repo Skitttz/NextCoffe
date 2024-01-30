@@ -8,7 +8,7 @@ const CustomLoading = () => {
       <div>
         <Image
           src={loading}
-          alt=""
+          alt="loading"
           width={16}
           height={16}
           className="animate-spin h-16 w-16 opacity-80 fill-blue-500"

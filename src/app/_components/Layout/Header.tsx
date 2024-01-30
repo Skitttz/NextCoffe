@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from '../../../public/logo.png';
+import Logo from '../../../../public/logo.png';
 
 interface navItems {
   nameItem: string;
@@ -10,16 +10,16 @@ interface navItems {
 export default function Header() {
   const navMenuItems = [
     { nameItem: 'Home', slug: '/' },
-    { nameItem: 'About', slug: '/about' },
     { nameItem: 'Blog', slug: '/blog' },
-    { nameItem: 'Coffe', slug: '/coffe' },
+    { nameItem: 'Shop', slug: '/coffe' },
+    { nameItem: 'About', slug: '/about' },
     { nameItem: 'Contact', slug: '/contact' },
   ];
 
   return (
     <>
       <header className="w-full bg-gray-200 bg-opacity-80 border-b border-b-slate-600 border-opacity-10 px-4 pt-2 mx-auto fixed z-50">
-        <nav className="max-w-5xl mx-auto flex justify-between items-center gap-x-6">
+        <nav className="max-w-5xl mx-auto flex justify-between items-center gap-x-6 font-besley">
           <Link className="flex items-center" href={'/'}>
             <h1 className="text-2xl font-besley font-black text-amber-800">
               Next [
@@ -35,6 +35,17 @@ export default function Header() {
               </li>
             ))}
           </ul>
+          <div className="flex gap-x-3 items-center">
+            <Link className="hover:text-slate-500" href={'/login'}>
+              Login
+            </Link>
+            <Link
+              href={'/register'}
+              className="font-bold px-2 py-1 rounded-md bg-amber-700 hover:bg-amber-800 text-slate-100"
+            >
+              Get started{' '}
+            </Link>
+          </div>
         </nav>
       </header>
       <div className="pb-24 lg:pb-[50px]"></div>
