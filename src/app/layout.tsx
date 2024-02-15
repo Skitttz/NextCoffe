@@ -1,10 +1,7 @@
-import { Inter } from 'next/font/google';
 import './globals.css';
-import { besley, roboto } from './fonts';
+import { inter, besley, roboto } from './fonts';
 import Header from './_components/Layout/Header';
 import Footer from './_components/Layout/Footer';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Next Coffe',
