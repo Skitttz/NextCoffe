@@ -45,22 +45,26 @@ const InfoBlock = ({ data }: { data: InfoBlockContent }) => {
 
   return (
     <div>
-      <div className="py-12 gap-x-8 grid grid-cols-[1fr,1fr] items-start">
-        <Image
-          src={BASE_URL_MEDIA + imageUrl}
-          width={800}
-          height={1200}
-          alt={altText || ''}
-          className={`rounded-sm shadow-sm object-contain ${
-            showImageRight ? '' : 'col-start-2 col-end-3'
-          }`}
-        />
-        <div className={` ${showImageRight ? '' : 'row-end-1'}`}>
+      <div className="py-12 gap-x-12 grid grid-cols-[1fr,1fr] items-center">
+        <div>
+          <Image
+            src={BASE_URL_MEDIA + imageUrl}
+            width={900}
+            height={1200}
+            alt={altText || ''}
+            className={`rounded-sm shadow-sm object-contain ${
+              showImageRight ? 'col-start-2 col-end-3' : ''
+            }`}
+          />
+        </div>
+        <div className={` ${showImageRight ? 'row-end-1' : ''}`}>
           <h1 className="text-amber-950 text-5xl font-besley">
             {title}
             <span className="text-yellow-600 inline-block">.</span>
           </h1>
-          <ReactMarkdown className="mt-8 copy">{content}</ReactMarkdown>
+          <ReactMarkdown className="mt-8 copy text-gray-800">
+            {content}
+          </ReactMarkdown>
           {button}
         </div>
       </div>
