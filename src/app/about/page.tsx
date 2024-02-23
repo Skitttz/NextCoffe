@@ -1,4 +1,9 @@
+import { Metadata } from 'next';
 import AboutBlockSection from '../_components/About/AboutBlockSection';
+
+export const metadata: Metadata = {
+  title: 'About',
+};
 
 export default async function AboutPage() {
   return (

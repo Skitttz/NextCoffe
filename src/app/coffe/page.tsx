@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -14,10 +15,14 @@ interface CoffesItem {
   image: string;
 }
 
+export const metadata: Metadata = {
+  title: 'Shop',
+};
+
 export default async function CoffePage() {
   const coffes = await getCoffesData();
   return (
-    <main className="bg-slate-200 animate-animeDown h-screen py-4">
+    <main className="animate-animeDown h-screen py-4">
       <h1 className="text-amber-950 max-w-5xl mx-auto mb-8 text-3xl font-semibold font-besley">
         Coffe Store
       </h1>
