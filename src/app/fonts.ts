@@ -1,6 +1,9 @@
 import { Besley , Inter, Roboto } from 'next/font/google'
 
-export const inter = Inter({ subsets: ['latin'], display: 'swap' });
+export const inter = Inter({ 
+  subsets: ['latin'], 
+  display: 'swap', 
+  variable: '--font-inter',});
 
 export const besley = Besley({
   subsets: ['latin'],
