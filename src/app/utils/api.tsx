@@ -6,6 +6,7 @@ import {
 } from '../_components/About/AboutBlock';
 import Link from 'next/link';
 import { getColorButton } from './colorsButton';
+import { AvatarAuthorProps, ImageProps } from './modal';
 
 const BASE_URL = process.env.BASE_API_URL || 'http://127.0.0.1:1337/api';
 export const BASE_URL_MEDIA =
@@ -65,4 +66,43 @@ export async function createAboutBlockPageData({
   }
   const { title, image } = aboutBlocksRaw;
   return { title, image };
+}
+
+export async function fetchBlogArticlesData() {
+  const blogDataRaw = await fetchData(
+    'blog-articles?sort=id:desc&populate=image&populate=author.avatar',
+  );
+  const { data: blogData } = blogDataRaw;
+  const processedBlogArticles = blogData.map(processBlogArticle);
+  return processedBlogArticles;
+}
+interface ArticleProps {
+  id: number;
+  attributes: {
+    title: string;
+    content: string;
+    publishedAt: string;
+    createdAt: string;
+    author: {
+      data: {
+        id: number;
+        attributes: {
+          name: string;
+          avatar: AvatarAuthorProps;
+        };
+      };
+    };
+    image: ImageProps;
+  };
+}
+
+function processBlogArticle(article: ArticleProps) {
+  return {
+    id: article.id,
+    ...article.attributes,
+    image: BASE_URL_MEDIA + article.attributes?.image.data[0]?.attributes.url,
+    avatarAuthor:
+      BASE_URL_MEDIA +
+      article.attributes.author.data?.attributes.avatar.data?.attributes.url,
+  };
 }
