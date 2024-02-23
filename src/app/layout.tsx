@@ -4,8 +4,8 @@ import Header from './_components/Layout/Header';
 import Footer from './_components/Layout/Footer';
 
 export const metadata = {
-  title: 'Next Coffe',
-  description: 'Coffee blog and store for online coffee ordering',
+  title: { template: '%s | Next Coffe', default: 'Next Coffe' },
+  description: 'Coffee blog and store coffee ordering',
 };
 
 export default function RootLayout({ children }) {
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning={true}>
       <link rel="icon" href="/favicon.ico" />
       <body
-        className={`${inter.className} ${besley.variable} ${roboto.variable} bg-slate-200 scroll-smooth flex flex-col`}
+        className={`${besley.variable} bg-sky-50 scroll-smooth flex flex-col`}
       >
         <Header />
         <main className="pt-2 min-h-screen">{children}</main>
