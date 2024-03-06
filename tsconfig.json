@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+          "./src/*",
+          
+      ],      
+      "@/components/*": ["components/*"]
+  },
     "lib": [
       "dom",
       "dom.iterable",
@@ -31,4 +39,5 @@
   "exclude": [
     "node_modules"
   ]
+  
 }
