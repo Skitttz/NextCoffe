@@ -4,6 +4,8 @@ import InfoBlock from '../app/_components/InfoBlock';
 import coffeImage from '../../public/coffe_home.png';
 import SubscribeNewsletter from './_components/Blog/SubscribeNewsletter';
 import { createInfoBlocksData, fetchData } from './utils/api';
+import BlogPreview from './_components/BlogPreview/BlogPreview';
+import CarouselVertical from './views/CarouselVertical';
 
 export default async function Home() {
   const dataInfobBlocksRaw = await fetchData(
@@ -12,7 +14,7 @@ export default async function Home() {
   const DateInfoBlock = await createInfoBlocksData(dataInfobBlocksRaw);
 
   return (
-    <main className="animate-animeFade min-h-screen max-w-5xl mx-auto flex flex-col gap-y-12">
+    <main className="animate-animeFade min-h-screen max-w-5xl mx-auto flex flex-col gap-y-16">
       <div className=" divide-y-4 divide-yellow-400">
         <div className="grid grid-cols-[2fr,1fr] gap-x-4 h-[auto] pb-24">
           <div className="flex flex-col gap-y-4 my-auto">
@@ -58,9 +60,15 @@ export default async function Home() {
           </div>
         </div>
       </div>
-      {DateInfoBlock.map((info: any, index: number) => (
-        <InfoBlock key={index} data={info} />
-      ))}
+      <div className="flex justify-center">
+        <CarouselVertical />
+      </div>
+      <div>
+        {DateInfoBlock.map((info: any, index: number) => (
+          <InfoBlock key={index} data={info} />
+        ))}
+      </div>
+      <BlogPreview />
       <SubscribeNewsletter />
     </main>
   );
