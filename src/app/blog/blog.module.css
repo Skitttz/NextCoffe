@@ -1,0 +1,114 @@
+/******************************************* 
+  Rich Text Styles
+*******************************************/
+
+/* Headers */
+.richtext h1 {
+  @apply text-4xl font-bold mb-4;
+}
+
+.richtext h2 {
+  @apply text-3xl font-bold mb-4;
+}
+
+.richtext h3 {
+  @apply text-2xl font-bold mb-4;
+}
+
+.richtext h4 {
+  @apply text-xl font-bold mb-4;
+}
+
+.richtext h5 {
+  @apply text-lg font-bold mb-4;
+}
+
+.richtext h6 {
+  @apply text-base font-bold mb-4;
+}
+
+/* Horizontal rules */
+.richtext hr {
+  @apply border-gray-300 my-8;
+}
+
+.richtext a {
+  /* @apply underline; */
+  @apply text-blue-700 underline;
+}
+
+/* Typographic replacements */
+.richtext p {
+  @apply mb-4;
+}
+
+/* Emphasis */
+.richtext strong {
+  @apply font-bold;
+}
+
+.richtext em {
+  @apply italic;
+}
+
+.richtext del {
+  @apply line-through;
+}
+
+/* Blockquotes */
+.richtext blockquote {
+  @apply border-l-4 border-gray-400 pl-4 py-2 mb-4;
+}
+
+/* Lists */
+.richtext ul {
+  @apply list-disc pl-4 mb-4;
+}
+
+.richtext ol {
+  @apply list-decimal pl-4 mb-4;
+}
+
+.richtext li {
+  @apply list-disc pl-4 mb-2;
+}
+
+.richtext li > ul {
+  @apply list-disc pl-4 mb-2;
+}
+
+.richtext li > ol {
+  @apply list-decimal pl-4 mb-2;
+}
+
+/* Code blocks */
+.richtext pre {
+  @apply font-mono bg-gray-900 text-gray-100 rounded p-4  my-6;
+}
+
+.richtext code {
+  @apply font-mono bg-gray-900 text-gray-100 rounded px-2 py-1;
+}
+
+/* Tables */
+.richtext table {
+  @apply w-full border-collapse border-gray-300 my-6;
+}
+
+.richtext th {
+  @apply bg-gray-900 text-left py-2 px-4 font-semibold border-b border-gray-300;
+}
+
+.richtext td {
+  @apply py-2 px-4 border-b border-gray-300;
+}
+
+/* Images */
+.richtext img {
+  @apply w-full object-cover rounded-xl my-6;
+}
+
+/* Custom containers */
+.richtext .warning {
+  @apply bg-yellow-100 border-yellow-500 text-yellow-700 px-4 py-2 rounded-lg mb-4;
+}

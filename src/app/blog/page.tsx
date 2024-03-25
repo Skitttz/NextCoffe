@@ -1,3 +1,4 @@
+import styles from './blog.module.css';
 import { Metadata } from 'next';
 import HighlightArticle from '../_components/Blog/HighlightArticle';
 import SubscribeNewsletter from '../_components/Blog/SubscribeNewsletter';
@@ -16,7 +17,9 @@ export default async function Blog() {
     (article: any) => !article.isHighlightArticle,
   );
   return (
-    <main className="min-h-[1080px] max-w-5xl mx-auto animate-animeDown lg:py-4 flex flex-col gap-y-24">
+    <main
+      className={`${styles} styles min-h-[1080px] max-w-5xl mx-auto animate-animeDown lg:py-4 flex flex-col gap-y-24`}
+    >
       <HighlightArticle data={foundHighLightArticleData} />
       <FeaturedItems items={featuredArticlesData} />
       <SubscribeNewsletter />

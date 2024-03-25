@@ -6,7 +6,7 @@ const HighlightArticle = ({ data }: Article) => {
   const { title, slug, image, content } = data;
   const lastIndex = content.lastIndexOf(' ', 450);
   return (
-    <article className="grid grid-cols-2 items-center gap-x-8 pt-8">
+    <article className="grid grid-cols-2 items-center gap-x-8">
       <div className="">
         <h3 className="font-besley font-bold text-2xl">{title}</h3>
         <p className="py-8 font-inter text-base">
