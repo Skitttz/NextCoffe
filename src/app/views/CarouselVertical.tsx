@@ -26,11 +26,11 @@ export default function CarouselVertical() {
           align: 'start',
         }}
         orientation="vertical"
-        className="w-full max-w-5xl shadow-sm"
+        className="w-full max-w-7xl shadow-sm"
       >
         <div className="grid grid-cols-[auto,1fr] bg-coffe-primary-50 rounded-md border px-6 shadow-sm">
           <CarouselDots />
-          <CarouselContent className="-mt-1 h-[540px]">
+          <CarouselContent className="h-[450px]">
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem key={index} className="pt-1 md:basis-1/2">
                 <div className="p-1">
