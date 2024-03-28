@@ -18,7 +18,7 @@ export async function fetchData(route: string) {
     const response = await axios.get(url);
     return response.data;
   } catch (err) {
-    throw new Error(`Could not fetch data from ${url}`);
+    throw new Error(`Ow no! Api is not working! :(`);
   }
 }
 
@@ -69,8 +69,9 @@ export async function createAboutBlockPageData({
 }
 
 export async function fetchBlogArticlesData() {
+  //Populate(query's) Article => image(media), author.avatar(relation one-to-many) , articleContent(component)
   const blogDataRaw = await fetchData(
-    'blog-articles?sort=id:desc&populate=image&populate=author.avatar',
+    'blog-articles?sort=id:desc&populate=image&populate=author.avatar&populate=articleContent.image',
   );
   const { data: blogData } = blogDataRaw;
   const processedBlogArticles = blogData.map(processBlogArticle);
