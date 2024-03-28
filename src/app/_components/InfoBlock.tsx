@@ -58,7 +58,7 @@ const InfoBlock = ({ data }: { data: InfoBlockContent }) => {
           />
         </div>
         <div className={` ${showImageRight ? 'row-end-1' : ''}`}>
-          <h1 className="text-amber-950 text-5xl font-besley">
+          <h1 className="text-amber-950 text-4xl font-besley inline-block">
             {title}
             <span className="text-yellow-600 inline-block">.</span>
           </h1>
