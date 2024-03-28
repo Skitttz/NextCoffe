@@ -20,7 +20,7 @@ const AboutBlockSection = async () => {
       <h2 className="text-3xl mb-6 font-semibold font-besley text-amber-950">
         {title}
       </h2>
-      <div className=" grid grid-cols-2 gap-x-8">
+      <div className=" grid grid-cols-[2fr,1fr] gap-x-8">
         <ul className="flex flex-col gap-y-4">
           {DateAboutBlock.map((info: any, index: number) => (
             <AboutBlock key={index} data={info} />
