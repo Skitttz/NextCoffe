@@ -1,10 +1,10 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from '../../../../public/icon-logo.svg';
-import { useEffect, useState } from 'react';
-import useDebounce from '../../hooks/useDebounce';
+import LogoWithoutCup from '@/assets/LogoWithoutCup';
 import { usePathname } from 'next/navigation';
+import { FaRegUser } from 'react-icons/fa';
+import { IoCartOutline } from 'react-icons/io5'; // import useDebounce from '../../hooks/useDebounce';
 
 interface navItems {
   nameItem: string;
@@ -54,16 +54,10 @@ export default function Header() {
         className={`transition-all w-full mx-auto block z-50 duration-700 bg-gray-50 border border-amber-950 border-opacity-10 rounded-md bg-opacity-95 shadow-sm py-1`}
       >
         <nav
-          className={`lg:max-w-7xl max-w-5xl  px-4 mx-auto flex justify-between items-center gap-x-6 font-roboto `}
+          className={`lg:max-w-7xl max-w-5xl mx-auto flex justify-between items-center gap-x-6 font-roboto `}
         >
-          <Link className="flex items-center" href={'/'}>
-            <Image
-              className="py-2"
-              src={Logo}
-              width={180}
-              height={50}
-              alt={'logo header'}
-            />{' '}
+          <Link className="flex" href={'/'}>
+            <LogoWithoutCup />{' '}
           </Link>
           <ul className="flex gap-x-6">
             {navMenuItems.map((item: navItems, index: number) => (
@@ -81,20 +75,23 @@ export default function Header() {
               </li>
             ))}
           </ul>
-          <div className="flex gap-x-5 items-center text-sm">
-            <Link className="hover:text-slate-500" href={'/login'}>
+          <div className="flex gap-x-2 items-center text-sm">
+            {/* <Link className="hover:text-slate-500" href={'/login'}>
               Login
-            </Link>
+            </Link> */}
             <Link
               href={'/register'}
-              className="transition-colors font-semibold px-2 py-1 rounded-md bg-coffe-primary-600 hover:bg-coffe-primary-700 text-gray-200"
+              className="transition-colors font-semibold px-2 py-1"
             >
-              Join US{' '}
+              <FaRegUser className="text-lg" />{' '}
+            </Link>
+            <Link href={'/'}>
+              <IoCartOutline className="text-xl" />
             </Link>
           </div>
         </nav>
       </header>
-      <div className="pb-24 lg:pb-20"></div>
+      <div className="pb-5 lg:pb-2"></div>
     </>
   );
 }
