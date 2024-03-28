@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import FeaturedArticle from './FeaturedArticle';
 
-const FeaturedItems = ({ items }) => {
+const FeaturedItems = ({ items, title }: any) => {
   const [numberArticle, setNumberArticle] = useState(3);
   const onShowMoreArticle = () => {
     if (numberArticle + 3 > items.length) {
@@ -13,7 +13,7 @@ const FeaturedItems = ({ items }) => {
   return (
     <section className="flex flex-col">
       <h3 className="text-amber-950 text-2xl text-left font-besley font-bold py-8">
-        Articles in the blog
+        {title || 'Articles in the blog '}
       </h3>
       <div className="grid grid-cols-3 gap-x-8">
         {items.slice(0, numberArticle).map((item: any) => (
