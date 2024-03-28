@@ -10,13 +10,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning={true}>
       <link rel="icon" href="/favicon.ico" />
-      <body
-        className={`${besley.variable} bg-sky-50 scroll-smooth flex flex-col`}
-      >
+      <body className={`${besley.variable} bg-sky-50 flex flex-col`}>
         <Header />
-        <main className="pt-2 min-h-screen">{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

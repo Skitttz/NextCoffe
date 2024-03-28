@@ -14,18 +14,18 @@ export default async function Home() {
   const DateInfoBlock = await createInfoBlocksData(dataInfobBlocksRaw);
 
   return (
-    <main className="animate-animeFade min-h-screen max-w-5xl mx-auto flex flex-col gap-y-16">
+    <main className="animate-animeFade min-h-screen lg:max-w-7xl max-w-5xl mx-auto flex flex-col gap-y-36">
       <div className=" divide-y-4 divide-yellow-400">
-        <div className="grid grid-cols-[2fr,1fr] gap-x-4 h-[auto] pb-24">
+        <div className="grid grid-cols-[1fr,600px] gap-x-4 pt-24 pb-36">
           <div className="flex flex-col gap-y-4 my-auto">
-            <h3 className={`font-medium text-amber-900 text-xl`}>
+            <h3 className={`font-medium text-amber-900 text-3xl`}>
               A simple pleasure for{' '}
               <span className="font-semibold">everyone</span>
             </h3>
-            <h2 className={`font-besley text-7xl`}>
+            <h2 className={`font-besley text-8xl`}>
               Good <span className="font-besley text-amber-950">Coffe</span>
             </h2>
-            <p className="font-light font-inter text-slate-950 max-w-xl mb-4">
+            <p className="font-light text-lg font-inter text-slate-950 max-w-xl mb-4">
               In the aromatic universe, each bean is a story waiting to be told,
               and each cup is a unique sensory journey. With each cup, embark on
               a sensory journey. Becomes a gateway to a transcendent experience,

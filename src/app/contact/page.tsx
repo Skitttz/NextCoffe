@@ -40,7 +40,7 @@ export default function Contact() {
   ];
 
   return (
-    <main className="min-h-[1080px] max-w-5xl mx-auto animate-animeDown">
+    <main className="min-h-[1080px] lg:max-w-7xl max-w-5xl mx-auto animate-animeDown">
       <div className=" grid grid-cols-[1fr,1fr] gap-x-8 mt-6">
         <div className="flex flex-col gap-y-4">
           <div className="pb-4 ">
@@ -61,8 +61,10 @@ export default function Contact() {
                   Closed
                 </span>{' '}
               </li>
-              <li className="mt-8 border justify-self-center border-x-slate-300 rounded-md p-2 text-center text-amber-950 font-medium">
-                {coffeStoreStatus()}
+              <li className="mt-8 mx-auto ">
+                <p className="bg-gray-700 border py-2 px-4 border-x-slate-300 rounded-md text-center text-amber-50 font-medium">
+                  {coffeStoreStatus()}
+                </p>
               </li>
             </ul>
           </div>

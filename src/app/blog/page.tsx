@@ -18,7 +18,7 @@ export default async function Blog() {
   );
   return (
     <main
-      className={`${styles} styles min-h-[1080px] max-w-5xl mx-auto animate-animeDown lg:py-4 flex flex-col gap-y-24`}
+      className={`${styles} styles min-h-[1080px] lg:max-w-7xl max-w-5xl mx-auto animate-animeDown lg:py-4 flex flex-col gap-y-24`}
     >
       <HighlightArticle data={foundHighLightArticleData} />
       <FeaturedItems items={featuredArticlesData} />
