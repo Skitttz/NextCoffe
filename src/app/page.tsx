@@ -14,10 +14,10 @@ export default async function Home() {
   const DateInfoBlock = await createInfoBlocksData(dataInfobBlocksRaw);
 
   return (
-    <main className="animate-animeFade min-h-screen lg:max-w-7xl max-w-5xl mx-auto flex flex-col gap-y-36">
-      <div className=" divide-y-4 divide-yellow-400">
-        <div className="grid grid-cols-[1fr,600px] gap-x-4 pt-24 pb-36">
-          <div className="flex flex-col gap-y-4 my-auto">
+    <main className="animate-animeFade min-h-screen lg:max-w-7xl max-w-5xl mx-auto flex flex-col gap-y-16">
+      <div className="divide-y-4 divide-yellow-400 lg:h-[90vh] flex items-center justify-center">
+        <div className="grid grid-cols-[1fr,600px] gap-x-4">
+          <div className="flex flex-col gap-y-4">
             <h3 className={`font-medium text-amber-900 text-3xl`}>
               A simple pleasure for{' '}
               <span className="font-semibold">everyone</span>
@@ -50,7 +50,7 @@ export default async function Home() {
               </Link>
             </div>
           </div>
-          <div className="my-auto">
+          <div className="">
             <Image
               src={coffeImage}
               width={1200}
