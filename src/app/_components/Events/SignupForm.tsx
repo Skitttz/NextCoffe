@@ -14,10 +14,10 @@ const SignupForm = ({ title, infoText }) => {
       </div>
       <div>
         <p className="text-center bg-slate-100 rounded-sm border border-amber-600 border-opacity-20 p-2">
-          To participate in the event you need to be a NextCoffe user, log in to
-          your account{' '}
+          To participate in the event you need to be a NextCoffe user, Please
+          log in to your account by{' '}
           <Link href={'/login'} className="font-bold text-amber-600">
-            clicando aqui.
+            clicking here.
           </Link>
         </p>
       </div>
