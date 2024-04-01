@@ -1,8 +1,9 @@
 'use client';
 import { useState } from 'react';
 import FeaturedArticle from './FeaturedArticle';
+import FeaturedEvent from './FeaturedEvents';
 
-const FeaturedItems = ({ items, title }: any) => {
+const FeaturedItems = ({ items, title, itemType }: any) => {
   const [numberArticle, setNumberArticle] = useState(3);
   const onShowMoreArticle = () => {
     if (numberArticle + 3 > items.length) {
@@ -16,9 +17,13 @@ const FeaturedItems = ({ items, title }: any) => {
         {title || 'Articles in the blog '}
       </h3>
       <div className="grid grid-cols-3 gap-x-8">
-        {items.slice(0, numberArticle).map((item: any) => (
-          <FeaturedArticle key={item.slug} data={item} />
-        ))}
+        {items.slice(0, numberArticle).map((item: any, index: number) => {
+          if (itemType === 'article') {
+            return <FeaturedArticle key={item.slug} data={item} />;
+          } else {
+            return <FeaturedEvent key={index} data={item} />;
+          }
+        })}
       </div>
       {numberArticle < items.length && (
         <button

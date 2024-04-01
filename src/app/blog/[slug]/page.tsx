@@ -21,7 +21,11 @@ export default async function Page({ params }) {
       {articleFindBySlug.articleContent.map((component: any) => (
         <ArticleComponent key={component.id} component={component} />
       ))}
-      <FeaturedItems items={moreArticle} title={'Explore others Articles'} />
+      <FeaturedItems
+        items={moreArticle}
+        title={'Explore others Articles'}
+        itemType={'article'}
+      />
     </main>
   );
 }
