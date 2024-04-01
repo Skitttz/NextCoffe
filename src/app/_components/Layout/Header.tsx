@@ -16,6 +16,7 @@ export default function Header() {
     { nameItem: 'Home', slug: '/' },
     { nameItem: 'Blog', slug: '/blog' },
     { nameItem: 'Shop', slug: '/coffe' },
+    { nameItem: 'Event', slug: '/event' },
     { nameItem: 'About', slug: '/about' },
     { nameItem: 'Contact', slug: '/contact' },
   ];
@@ -54,7 +55,7 @@ export default function Header() {
         className={`transition-all w-full mx-auto block z-50 duration-700 bg-gray-50 border border-amber-950 border-opacity-10 rounded-md bg-opacity-95 shadow-sm py-1`}
       >
         <nav
-          className={`lg:max-w-7xl max-w-5xl mx-auto flex justify-between items-center gap-x-6 font-roboto `}
+          className={`lg:max-w-7xl max-w-5xl mx-auto flex justify-between items-center gap-x-6 font-roboto font-medium`}
         >
           <Link className="flex" href={'/'}>
             <LogoWithoutCup />{' '}

@@ -20,6 +20,18 @@ export interface Article{
   }
 }
 
+export interface Event{
+  data:{
+      name:string,
+      id:string,
+      content:string,
+      createdAt:string,
+      updatedAt:string,
+      publishedAt:string,
+      image: string;
+  }
+}
+
 export interface ImageProps{
   data:{
     id:number,
