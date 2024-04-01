@@ -7,7 +7,6 @@ export default async function Page() {
   const eventData = eventRaw.data;
 
   const allEventsRaw = await fetchAllEvents();
-  console.log(allEventsRaw);
   const highLightEventData =
     (Array.isArray(eventData) &&
       eventData.find((event: any) => event.isPrincipalEventMenu)) ||

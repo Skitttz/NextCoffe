@@ -17,11 +17,11 @@ const FeaturedItems = ({ items, title, itemType }: any) => {
         {title || 'Articles in the blog '}
       </h3>
       <div className="grid grid-cols-3 gap-x-8">
-        {items.slice(0, numberArticle).map((item: any, index: number) => {
+        {items.slice(0, numberArticle).map((item: any) => {
           if (itemType === 'article') {
             return <FeaturedArticle key={item.slug} data={item} />;
           } else {
-            return <FeaturedEvent key={index} data={item} />;
+            return <FeaturedEvent key={item.id} data={item} />;
           }
         })}
       </div>

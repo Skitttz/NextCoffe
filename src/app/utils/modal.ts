@@ -23,12 +23,17 @@ export interface Article{
 export interface Event{
   data:{
       name:string,
-      id:string,
-      content:string,
+      id:number,
+      description:string,
+      initialDate:string,
+      image: string;
+      endDate:string,
+      singlePrice:number,
+      sharedPrice:number,
+      isPrincipalEventMenu:boolean,
       createdAt:string,
       updatedAt:string,
       publishedAt:string,
-      image: string;
   }
 }
 

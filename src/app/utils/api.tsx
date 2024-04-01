@@ -115,7 +115,7 @@ export async function fetchIndividualEvent(eventId) {
   return response;
 }
 
-export async function processEventData(event: any) {
+function processEventData(event: any) {
   return {
     ...event.attributes,
     id: event.id,
