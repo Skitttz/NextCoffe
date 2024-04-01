@@ -7,10 +7,12 @@ import {
 import Link from 'next/link';
 import { getColorButton } from './colorsButton';
 import { AvatarAuthorProps, ImageProps } from './modal';
+import qs from 'qs';
 
-const BASE_URL = process.env.BASE_API_URL || 'http://127.0.0.1:1337/api';
+const BASE_URL =
+  process.env.NEXT_PUBLIC_BASE_API_URL || 'http://127.0.0.1:1337/api';
 export const BASE_URL_MEDIA =
-  process.env.BASE_API_URL_MEDIA || 'http://127.0.0.1:1337';
+  process.env.NEXT_PUBLIC_BASE_API_URL_MEDIA || 'http://127.0.0.1:1337';
 
 export async function fetchData(route: string) {
   const url = `${BASE_URL}/${route}`;
@@ -106,4 +108,42 @@ function processBlogArticle(article: ArticleProps) {
       BASE_URL_MEDIA +
       article.attributes.author.data?.attributes.avatar.data?.attributes.url,
   };
+}
+
+export async function fetchIndividualEvent(eventId) {
+  const response = await axios.get(`${BASE_URL}/api/events/${eventId}`);
+  return response;
+}
+
+export async function processEventData(event: any) {
+  return {
+    ...event.attributes,
+    id: event.id,
+    image: BASE_URL_MEDIA + event.attributes?.image.data?.attributes.url,
+  };
+}
+
+export async function fetchAllEvents() {
+  const query = qs.stringify(
+    {
+      pagination: {
+        start: 0,
+        limit: 12,
+      },
+      sort: ['initialDate:asc'],
+      filters: {
+        initialDate: {
+          $gt: new Date(),
+        },
+      },
+      populate: {
+        image: {
+          populate: '*',
+        },
+      },
+    },
+    { encodeValuesOnly: true },
+  );
+  const response = await axios.get(`${BASE_URL}/events?${query}`);
+  return response.data?.data.map((event: any) => processEventData(event));
 }
