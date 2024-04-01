@@ -17,13 +17,16 @@ const FeaturedEvent = ({ data: event }: Event) => {
           <h5 className="mt-1 font-besley font-bold text-lg text-amber-950 ">
             {event.name}
           </h5>
-          <p className="font-medium my-2">
+          <p className="my-2">
             Prices starting at{' '}
             <span className="font-semibold text-amber-800">
               ${event.singlePrice}
             </span>
           </p>
-          <p className="text-sm">{formatDate(event.endDate)}</p>
+          <p className="text-sm">
+            Event start day{' '}
+            <span className="font-medium">{formatDate(event.initialDate)}</span>
+          </p>
         </div>
       </div>
     </Link>
